@@ -51,20 +51,20 @@ if ($logueado == 0) { ?>
             <div class="user-actions">
                 <div class="deslog">
                     <form action="<?=$actual?>" method="post">
-                        <button type="submit" name="logout">Salir</button>
+                        <button type="submit" name="logout">Logout</button>
                     </form>
                 </div>
-                <div class="cambiar-avatar">
+                <!--<div class="cambiar-avatar">
                     <form action="<?=$actual?>" method="post" enctype="multipart/form-data">
                         <input type="file" name="imagen" id="imagen">
                         <button type="submit" name="avatar">Cambiar Avatar</button>
                     </form>
-                </div>
+                </div>-->
             </div>
         </div>
-        <div class="noticias square flex-row-center">
+        <!--<div class="noticias square flex-row-center">
             <p>noticias</p>
-        </div>
+        </div>-->
         <div class="jugar square flex-row-center">
             <a href="jugar.php">JUGAR</a>
         </div>

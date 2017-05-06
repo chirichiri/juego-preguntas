@@ -13,7 +13,7 @@ body, html {
 }
 
 body {
-    background-color: #9ed670;
+    background-color: #547AA5;
 }
 
 #container {
@@ -28,7 +28,7 @@ header {
     height: 50px;
     width: 100%;
     order: 1;
-    background-color: #d64d4d;
+    background-color: #D64D4D;
     border-bottom: 1px solid white;
     display: flex;
     flex-flow: column;
@@ -42,7 +42,7 @@ header {
     flex: 1 100%;
     order: 2;
     max-width: 100%;
-    margin-top: 50px;
+    margin-top: 45px;
     min-height: calc(100% - 100px);
     align-content: space-between;
 }
@@ -98,22 +98,29 @@ footer {
 
 /***************************** MAIN ******************************/
 .forms {
-    background-color: #e39e54;
+    background-color: #D0D6B5;
     height: 250px;
     order: 1;
     margin: auto;
 }
 
 .user {
-    background-color: #4d7358;
+    background-color: #D0D6B5;
     order: 1;
     height: 150px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+}
+
+.profile {
+    background-color: #547AA5;
 }
 
 .noticias {
-    
+
     order: 2;
-    background-color: #e39e54;
+    background-color: #FFCDB2;
     max-height: 150px;
 }
 
@@ -142,7 +149,7 @@ footer {
     flex: 0 100%;
     color: white;
     font-weight: bold;
-    background-color: #e8d174;
+    background-color: #F48668;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -155,17 +162,17 @@ footer {
 #login {
     order: 1;
     width: 50%;
-    background-color: #e39e54;
+    background-color: #D64D4D;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    cursor: pointer;
 }
 
 #register {
     order: 2;
-    background-color: #e8d174;
+    background-color: #F48668;
     width: 50%;
     border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    cursor: pointer;
 }
 
 #registro {
@@ -189,14 +196,14 @@ footer {
 
 .campo input {
     text-align: center;
-    border: 2px solid #d64d4d;
+    border: 3px solid #D64D4D;
 }
 
 .campo button {
-    background-color: #d64d4d;
+    background-color: #D64D4D;
     color: white;
     font-weight: bold;
-    border: 1px solid #d64d4d;
+    border: 1px solid #D64D4D;
     box-shadow: 1px 1px 5px black;
 }
 /************************* FIN REGISTRO **************************/
@@ -216,9 +223,10 @@ footer {
     order: 1;
     flex: 0 100px;
     margin-left: 1%;
-    border: 1px red solid;
+    /*border: 1px red solid;*/
     text-align: center;
-    color: white;
+    color: #F48668;
+    font-weight: bold;
     text-transform: capitalize;
 }
 
@@ -226,7 +234,7 @@ footer {
     flex: 1;
     margin-right: 1%;
     order: 2;
-    border: 1px red solid;
+    /*border: 1px red solid;*/
 }
 
 /************************* FIN USUARIO ***************************/

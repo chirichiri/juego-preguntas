@@ -15,7 +15,7 @@ function cambiarAvatar($imagen) {
     if ($_FILES[$imagen]["error"] == UPLOAD_ERR_OK) {
         $actual = avatar();
 
-        if ($actual != NULL) {
+        if ($actual != NULL && $actual != "user/default/avatar.png") {
             unlink($actual);
         }
 

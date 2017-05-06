@@ -21,6 +21,7 @@ if ($_POST && isset($_POST["login"])) {
 $logueado = mantenerLogin();
 $titulos = [
 "index.php" =>  "A jugar con jugo",
+"profile.php"   =>  "Perfil"
 ];
 
 $titulo = $titulos[$actual];

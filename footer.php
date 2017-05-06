@@ -14,7 +14,7 @@ function toggle_registro() {
 
     registro.style.display = 'flex';
     login.style.display = 'none';
-    boton_registro.style.background = '#e39e54';
+    boton_registro.style.background = '#D64D4D';
     boton_login.style.background = 'none';
 }
 function toggle_login() {
@@ -26,7 +26,7 @@ function toggle_login() {
     registro.style.display = 'none';
     login.style.display = 'flex';
     boton_registro.style.background = 'none';
-    boton_login.style.background = '#e39e54';
+    boton_login.style.background = '#D64D4D';
 }
 </script>
 </body>
