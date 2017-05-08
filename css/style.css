@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Dosis|Yanone+Kaffeesatz:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 /********************** ESTRUCTURA GENERAL **********************/
 * {
     margin: 0;
@@ -44,7 +45,7 @@ header {
     max-width: 100%;
     margin-top: 45px;
     min-height: calc(100% - 100px);
-    align-content: space-between;
+    align-content: flex-start;
 }
 
 footer {
@@ -93,6 +94,10 @@ footer {
     font-weight: 700;
 }
 
+#logo a {
+    text-decoration: none;
+}
+
 
 /*************************** FIN HEADER **************************/
 
@@ -107,18 +112,54 @@ footer {
 .user {
     background-color: #D0D6B5;
     order: 1;
-    height: 150px;
+    height: 105px;
     width: 100%;
     border-bottom: 2px solid white;
     border-radius: 0;
 }
 
 .profile {
-    background-color: #547AA5;
+    flex: 0 70%;
+    margin: auto;
+    order: 2;
+    color: #393E41;
+    margin-top: 5vw;
+    background-color: #D0D6B5;
+}
+
+.profile h1 {
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    background-color: #d64d4d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.profile ul {
+    width: 70%;
+    list-style: none;
+    margin: 5px 0 10px 0;
+    text-align: center;
+}
+
+.profile li {
+    font-family: Roboto;
+    font-size: 15px;
+    margin: 3px 0;
+}
+
+.profile p {
+    font-weight: bold;
+}
+
+.profile .campo button {
+    margin-bottom: 10px;
 }
 
 .noticias {
-
     order: 2;
     background-color: #FFCDB2;
     max-height: 150px;
@@ -128,6 +169,7 @@ footer {
     order: 5;
     background-color: #d64d4d;
     height: 100px;
+    margin-top: 20%;
 }
 
 .jugar a {
@@ -210,13 +252,18 @@ footer {
 
 /**************************** USUARIO ****************************/
 
-#avatar {
-    width: 80px;
-    margin-top: 10px;
+.user-actions {
+    flex: 1;
+    margin-right: 1%;
+    order: 2;
+    height: 100%;
+    /*border: 1px red solid;*/
 }
 
-#imagen {
-    width: 130px;
+#avatar {
+    width: 80px;
+    max-height: 100px;
+    margin-top: 10px;
 }
 
 .user-info {
@@ -225,19 +272,146 @@ footer {
     margin-left: 1%;
     /*border: 1px red solid;*/
     text-align: center;
-    color: #F48668;
+}
+
+.user-actions-1, .user-actions-2, .user-actions-3, .user-actions-4 {
+    flex: 0 50%;
+    min-height: 50%;
+    overflow: hidden;
+}
+
+.user-actions-1 {
+    order: 1;
+    color: #393E41;
     font-weight: bold;
     text-transform: capitalize;
 }
 
-.user-actions {
-    flex: 1;
-    margin-right: 1%;
+.user-actions-1 a {
+    text-decoration: none;
+    color: #393E41;
+}
+
+.user-actions-2 {
     order: 2;
-    /*border: 1px red solid;*/
+}
+
+.user-actions-3 {
+    order: 4;
+}
+
+.user-actions-4 {
+    order: 3;
+}
+
+.user-actions-small-2 button, .user-actions-2 button{
+    background-color: #D64D4D;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #D64D4D;
+    box-shadow: 1px 1px 5px black;
+    padding: 3px;
 }
 
 /************************* FIN USUARIO ***************************/
+
+/*************************** PREGUNTAS ***************************/
+#preg {
+    min-height: 30px;
+    background-color: #D64D4D;
+    color: white;
+    font-weight: bold;
+}
+
+#resp1, #resp2, #resp3, #resp4 {
+    background-color: #D0D6B5;
+}
+
+#resp1 a, #resp2 a, #resp3 a, #resp4 a {
+    text-decoration: none;
+    color: #393E41;
+    font-weight: bold;
+}
+
+#preg {
+    order: 2;
+}
+
+#resp1 {
+    order: 3;
+}
+
+#resp2 {
+    order: 5;
+}
+
+#resp3 {
+    order: 6;
+}
+
+#resp4 {
+    order: 7;
+}
+.user-small {
+    background-color: #D0D6B5;
+    order: 1;
+    min-height: 70px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+}
+
+.user-small .user-info {
+    height: 70px;
+}
+
+.user-small #avatar {
+    max-width: 50px;
+    max-height: 70px;
+}
+
+.user-actions-small {
+    width: 70%;
+    order: 2;
+}
+
+.user-actions-small-1, .user-actions-small-2, .user-actions-small-3, .user-actions-small-4 {
+    flex: 0 33%;
+    min-height: 30px;
+    overflow: hidden;
+}
+
+.user-actions-small-1 {
+    order: 1;
+    color: #393E41;
+    font-weight: bold;
+    text-transform: capitalize;
+    justify-content: flex-start;
+}
+
+.user-actions-small-1 a {
+    text-decoration: none;
+    color: #393E41;
+}
+
+.user-actions-small-2 {
+    order: 3;
+}
+
+.user-actions-small-3 {
+    order: 2;
+}
+
+.user-actions-small-3 ul {
+    list-style: none;
+}
+
+.user-actions-small-4 {
+    order: 4;
+    display: none;
+}
+
+/************************* FIN PREGUNTAS *************************/
 
 /**************************** FOOTER *****************************/
 #copyright {

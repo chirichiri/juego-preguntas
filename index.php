@@ -39,29 +39,8 @@ if ($logueado == 0) { ?>
         </div>
     </div>
     <?php } elseif ($logueado == 1) {?>
-        <div class="user square flex-row-center">
-            <div class="user-info">
-                <div class="avatar">
-                        <a href="#"><img id="avatar" src="<?php echo avatar(); ?>" alt="Avatar"></a>
-                </div>
-                <div class="username">
-                    <p><?=$_SESSION["user"]?></p>
-                </div>
-            </div>
-            <div class="user-actions">
-                <div class="deslog">
-                    <form action="<?=$actual?>" method="post">
-                        <button type="submit" name="logout">Logout</button>
-                    </form>
-                </div>
-                <!--<div class="cambiar-avatar">
-                    <form action="<?=$actual?>" method="post" enctype="multipart/form-data">
-                        <input type="file" name="imagen" id="imagen">
-                        <button type="submit" name="avatar">Cambiar Avatar</button>
-                    </form>
-                </div>-->
-            </div>
-        </div>
+
+
         <!--<div class="noticias square flex-row-center">
             <p>noticias</p>
         </div>-->
