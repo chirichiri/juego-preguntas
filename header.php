@@ -1,26 +1,25 @@
 <?php
 require_once('functions.php');
-//debug();
+// debug();
 
 $actual = basename($_SERVER['PHP_SELF']);
 
-
 if ($_POST && isset($_POST["login"])) {
-    if (logueo($_POST["user"], $_POST["pass"]) == 1) {
-        genSesion();
-        redirect($actual);
+    if (Sesion::logueo($_POST["user"], $_POST["pass"]) == 1) {
+        Sesion::genSesion();
+        redirect("index.php");
     }
 } elseif ($_POST && isset($_POST["register"])) {
-    crearUser();
+    $repositorio->crearUser(new User($_POST["user"], $_POST["mail"], $_POST["pass"]));
     redirect("index.php");
 } elseif ($_POST && isset($_POST["logout"])) {
-    logout();
+    Sesion::logout();
 } elseif ($_POST && isset($_POST["avatar"])) {
-    if (($avatar = cambiarAvatar("imagen")) !== 0) {
+    if (($avatar = $repositorio->cambiarAvatar("imagen")) !== 0) {
         echo $avatar;
     }
 } elseif ($_POST && isset($_POST["cargarPregunta"])) {
-    cargarPregunta();
+    $repoPreguntas->cargarPregunta();
 }
 
 

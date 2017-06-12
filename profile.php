@@ -2,7 +2,7 @@
 if ($logueado == 0) {
     redirect('index.php');
 }elseif ($logueado == 1) {
-    $user = buscarUser("user", $_SESSION["user"]);
+    $user = $repositorio->buscarUser("user", $_SESSION["user"]);
     if ($_POST && isset($_POST["cambiarDatos"])) { ?>
         <div class="profile square flex-row-center">
             <h1>Cambiar Datos</h1>

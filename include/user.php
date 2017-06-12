@@ -2,7 +2,7 @@
 <div class="user square flex-row-center">
     <div class="user-info">
         <div class="avatar">
-                <a href="avatar.php"><img id="avatar" src=<?=avatar() . "?"?> alt="Avatar"></a>
+                <a href="avatar.php"><img id="avatar" src=<?=User::getAvatar() . "?"?> alt="Avatar"></a>
         </div>
 
     </div>
@@ -31,7 +31,7 @@
     <div class="user-small square flex-row-center">
         <div class="user-info">
             <div class="avatar">
-                    <a href="avatar.php"><img id="avatar" src=<?=avatar() . "?" ?> alt="Avatar"></a>
+                    <a href="avatar.php"><img id="avatar" src=<?=User::getAvatar() . "?" ?> alt="Avatar"></a>
             </div>
 
         </div>
