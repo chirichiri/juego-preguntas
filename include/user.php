@@ -12,7 +12,7 @@
         </div>
         <div class="user-actions-2 flex-row-center">
             <form action="<?=$actual?>" method="post">
-                <button type="submit" name="logout">Logout</button>
+                <button type="submit" name="logout" id="logout">Logout</button>
             </form>
         </div>
         <div class="user-actions-3 flex-row-center">
@@ -22,7 +22,7 @@
         </div>
         <div class="user-actions-4 flex-row-center">
             <ul>
-                <a href="jugar.php"><li>Jugar</li></a>
+                <li>Puntos: <?=$_SESSION["puntos"];?></li>
             </ul>
         </div>
     </div>

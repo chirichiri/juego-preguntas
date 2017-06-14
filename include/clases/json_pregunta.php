@@ -1,30 +1,19 @@
 <?php
 require_once 'json.php';
 
-class Json_preguntas extends Json {
+class Json_pregunta extends Json {
 
 	public function cargarPregunta(Pregunta $pregunta) {
 	    $preguntaFinal = [
 	        "id"    =>  $this->generarID(),
-	        "preg"  =>  $pregunta->pregunta,
-	        "resp1" =>  $pregunta->respuesta_1,
-	        "resp2" =>  $pregunta->respuesta_2,
-	        "resp3" =>  $pregunta->respuesta_3,
-	        "resp4" =>  $pregunta->respuesta_4
+	        "preg"  =>  $pregunta->getPregunta(),
+	        "resp1" =>  $pregunta->getRespuesta1(),
+	        "resp2" =>  $pregunta->getRespuesta2(),
+	        "resp3" =>  $pregunta->getRespuesta3(),
+	        "resp4" =>  $pregunta->getRespuesta4()
 	    ];
 
-	    file_put_contents("preguntas.json", json_encode($pregunta) . PHP_EOL, FILE_APPEND);
-	}
-
-	public function todosPreguntas() {
-	    $array = explode(PHP_EOL, file_get_contents($this->getArchivo()));
-
-	    foreach ($array as $key => $value) {
-	        $arrayTerminado[] = json_decode($value, true);
-	    }
-
-	    array_pop($arrayTerminado);
-	    return $arrayTerminado;
+	    file_put_contents($this->getArchivo(), json_encode($preguntaFinal) . PHP_EOL, FILE_APPEND);
 	}
 
 	public function buscarPregunta() {
@@ -41,10 +30,6 @@ class Json_preguntas extends Json {
 	            }
 	        }
 	    }
-	}
-
-	public function solucion() {
-
 	}
 
 	public function contarPreguntas() {

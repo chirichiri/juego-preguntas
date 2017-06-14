@@ -22,7 +22,7 @@ public function cambiarAvatar($imagen) {
 	        }
 	        else {
 
-	            $archivoFinal = dirname(__FILE__);
+	            $archivoFinal = realpath(__DIR__) . "/../..";
 	            $archivoFinal = $archivoFinal . "/user/" . $_SESSION["user"];
 
 	            if (!file_exists($archivoFinal)) {

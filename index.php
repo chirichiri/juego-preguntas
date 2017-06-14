@@ -19,7 +19,7 @@ if ($logueado == 0) { ?>
                     <input type="password" name="pass" placeholder="Password">
                 </div>
                 <div class="campo">
-                    <button type="submit" name="login">Loguearse</button>
+                    <button type="submit" name="login" id="loguearse">Loguearse</button>
                 </div>
             </form>
             <form id="registro" class="flex-row-center" action="index.php" method="post">
@@ -54,4 +54,4 @@ if ($logueado == 0) { ?>
 
 
 
-        <?php include_once('footer.php') ?>
+        <?php require_once('footer.php') ?>

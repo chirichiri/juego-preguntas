@@ -113,7 +113,7 @@ public function setPuntaje($puntaje) {
 }
 
 public static function getAvatar() {
-    $existe = GLOB("../..user/" . $_SESSION["user"] . "/avatar.{jpg,png,gif,jgeg,svg,bmp}", GLOB_BRACE);
+    $existe = GLOB("user/" . $_SESSION["user"] . "/avatar.{jpg,png,gif,jgeg,svg,bmp}", GLOB_BRACE);
     if ($existe != NULL) {
         return $existe[0];
     } else {

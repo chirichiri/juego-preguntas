@@ -6,21 +6,11 @@ class Json_user extends Json {
 	        "id"    =>  $this->generarID("user"),
 	        "user"  =>  $user->getUser(),
 	        "mail"  =>  $user->getMail(),
-	        "pass"  =>  password_hash($user->getPass(), PASSWORD_DEFAULT)
+	        "pass"  =>  password_hash($user->getPass(), PASSWORD_DEFAULT),
+			"puntos"	=>	0
 	    ];
 
 	    file_put_contents($this->getArchivo(), json_encode($user) . PHP_EOL, FILE_APPEND);
-	}
-
-	public function todosUser() {
-	    $array = explode(PHP_EOL, file_get_contents($this->getArchivo()));
-
-	    foreach ($array as $key => $value) {
-	        $arrayTerminado[] = json_decode($value, true);
-	    }
-
-	    array_pop($arrayTerminado);
-	    return $arrayTerminado;
 	}
 
 	public function buscarUser($campo, $valor) {

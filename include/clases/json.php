@@ -1,8 +1,9 @@
 <?php
-require_once 'json_preguntas.php';
+require_once 'json_pregunta.php';
 require_once 'json_user.php';
+require_once 'json_partida.php';
 
-class Json extends Repositorio {
+abstract class Json extends Repositorio {
 
 	private $archivo;
 
@@ -11,19 +12,42 @@ class Json extends Repositorio {
 		return $this;
 	}
 
-	public function generarID($tipo) {
-		$archivo = $this->getArchivo();
-	    if ($archivo == "user") {
-	        $id = count($this->todosUser());
-	    }elseif ($archivo == "preguntas") {
-	        $id = count($this->todosPreguntas());
-	    }
+	public function generarID() {
+		$id = count($this->todosDatos());
 
-	    if ($id != 0) {
-	        return $id+1;
-	    } else {
-	        return 1;
-	    }
+		if ($id != 0) {
+			return $id+1;
+		} else {
+			return 1;
+		}
+	}
+
+	public function modificarEspecifico($id, $dato, $nuevoValor){
+		$array = $this->todosDatos();                   /* CARGA TODOS LOS USUARIOS A UN ARRAY */
+		unlink($this->getArchivo());                        /* BORRA EL ARCHIVO DE USUARIOS VIEJO */
+
+		foreach ($array as $key => $value) {
+			if ($array[$key]["id"] == $id) {
+				if ($dato == "pass") {
+					$array[$key][$dato] = password_hash($nuevoValor, PASSWORD_DEFAULT);
+				}else {
+					$array[$key][$dato] = $nuevoValor;     /* DETECTA Y CAMBIA EL CAMPO A MODIFICAR */
+
+				}
+			}
+			file_put_contents($this->getArchivo(), json_encode($array[$key]) . PHP_EOL, FILE_APPEND);       /* GUARDA TODOS LOS USERS */
+		}
+	}
+
+	public function todosDatos() {
+		$array = explode(PHP_EOL, file_get_contents($this->getArchivo()));
+
+		foreach ($array as $key => $value) {
+			$arrayTerminado[] = json_decode($value, true);
+		}
+
+		array_pop($arrayTerminado);
+		return $arrayTerminado;
 	}
 
 	public function setArchivo($archivo) {
@@ -36,4 +60,4 @@ class Json extends Repositorio {
 	}
 }
 
- ?>
+?>

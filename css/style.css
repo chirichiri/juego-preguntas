@@ -8,6 +8,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+ul li {
+	list-style: none;
+	text-align: center;
+}
+
 body, html {
     width: 100%;
     height: 100%;
@@ -107,6 +112,10 @@ footer {
     height: 250px;
     order: 1;
     margin: auto;
+}
+
+#loguearse {
+	cursor: pointer;
 }
 
 .user {
@@ -264,6 +273,10 @@ footer {
     width: 80px;
     max-height: 100px;
     margin-top: 10px;
+}
+
+#logout {
+	cursor: pointer;
 }
 
 .user-info {

@@ -4,22 +4,30 @@ require_once('functions.php');
 
 $actual = basename($_SERVER['PHP_SELF']);
 
+if ($actual === "test.php" || $actual === "jugar.php") {
+	$repoPartida = new Json_partida(realpath(__DIR__ . "/partidas.json"));
+	$partida = new Partida();
+	$repoPartida->crearPartida($partida);
+	echo '<script type="text/javascript" src="js/partida.js"></script>';
+}
+
 if ($_POST && isset($_POST["login"])) {
     if (Sesion::logueo($_POST["user"], $_POST["pass"]) == 1) {
         Sesion::genSesion();
         redirect("index.php");
     }
 } elseif ($_POST && isset($_POST["register"])) {
-    $repositorio->crearUser(new User($_POST["user"], $_POST["mail"], $_POST["pass"]));
+    $repoUser->crearUser(new User($_POST["user"], $_POST["mail"], $_POST["pass"]));
     redirect("index.php");
 } elseif ($_POST && isset($_POST["logout"])) {
     Sesion::logout();
 } elseif ($_POST && isset($_POST["avatar"])) {
-    if (($avatar = $repositorio->cambiarAvatar("imagen")) !== 0) {
+    if (($avatar = $repoUser->cambiarAvatar("imagen")) !== 0) {
         echo $avatar;
     }
 } elseif ($_POST && isset($_POST["cargarPregunta"])) {
-    $repoPreguntas->cargarPregunta();
+	$pregunta = new Pregunta($_POST);
+    $repoPregunta->cargarPregunta($pregunta);
 }
 
 
@@ -29,7 +37,8 @@ $titulos = [
 "avatar.php"    =>  "Modificar Avatar",
 "jugar.php" =>  "Preguntando con jugo",
 "cargarpregunta.php"    =>  "Cargar pregunta nueva",
-"user.php"  =>  "No deberías estar acá"
+"user.php"  =>  "No deberías estar acá",
+"test.php"	=>	"testeando cosas"
 ];
 
 $titulo = $titulos[$actual];

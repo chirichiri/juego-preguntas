@@ -1,16 +1,18 @@
 <?php
-include 'include/clases/user.php';
-include 'include/clases/pregunta.php';
-include 'include/clases/repositorio.php';
-include 'include/clases/sesion.php';
+require_once 'include/clases/user.php';
+require_once 'include/clases/repositorio.php';
+require_once 'include/clases/sesion.php';
+require_once 'include/clases/partida.php';
 
 session_start();
 // Sesion::logout();
 
 $logueado = Sesion::mantenerLogin();
 
-$repositorio = new Json_user(realpath(__DIR__ . "/usuarios.json"));
-$repoPreguntas = new Json_preguntas(realpath(__DIR__ . "/preguntas.json"));
+$repoUser = new Json_user(realpath(__DIR__ . "/usuarios.json"));
+
+$repoPregunta = new Json_pregunta(realpath(__DIR__ . "/preguntas.json"));
+
 
 
 function redirect($url, $permanent = false) {

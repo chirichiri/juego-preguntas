@@ -9,7 +9,13 @@ class Pregunta {
 	private $respuesta_4;
 
 	public function __construct ($pregunta) {
-		$this->setId($pregunta["id"]);
+		global $repoPreguntas;
+		if (!isset($pregunta["id"])) {
+			$this->setId(0);
+		}else {
+			$this->setId($pregunta["id"]);
+		}
+
 		$this->setPregunta($pregunta["preg"]);
 		$this->setRespuesta1($pregunta["resp1"]);
 		$this->setRespuesta2($pregunta["resp2"]);

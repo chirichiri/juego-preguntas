@@ -2,7 +2,7 @@
 if ($logueado == 0) {
     redirect('index.php');
 }elseif ($logueado == 1) {
-    $user = $repositorio->buscarUser("user", $_SESSION["user"]);
+    $user = $repoUser->buscarUser("user", $_SESSION["user"]);
     if ($_POST && isset($_POST["cambiarDatos"])) { ?>
         <div class="profile square flex-row-center">
             <h1>Cambiar Datos</h1>
@@ -39,4 +39,4 @@ if ($logueado == 0) {
 
 <?php
 } }
- include_once('footer.php'); ?>
+ require_once('footer.php'); ?>
