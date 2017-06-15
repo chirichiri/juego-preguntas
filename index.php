@@ -47,6 +47,9 @@ if ($logueado == 0) { ?>
         <div class="jugar square flex-row-center">
             <a href="jugar.php">JUGAR</a>
         </div>
+		<div class="jugar square flex-row-center">
+            <a href="leaderboard.php">LEADERBOARD</a>
+        </div>
 
         <?php } ?>
 

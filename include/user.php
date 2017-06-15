@@ -17,7 +17,7 @@
         </div>
         <div class="user-actions-3 flex-row-center">
             <ul>
-                <li>Menu</li>
+                <li><a href="leaderboard.php">Leaderboard</a></li>
             </ul>
         </div>
         <div class="user-actions-4 flex-row-center">
@@ -45,9 +45,9 @@
                 </form>
             </div>
             <div class="user-actions-small-3 flex-row-center">
-                <ul>
-                    <li>Menu</li>
-                </ul>
+				<ul>
+	                <li>Puntos: <?=$_SESSION["puntos"];?></li>
+	            </ul>
             </div>
             <div class="user-actions-small-4 flex-row-center">
             </div>

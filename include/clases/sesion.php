@@ -14,7 +14,7 @@ class Sesion {
 
 	public static function genSesion() {
 		global $repoUser;
-	    $sesion = $repoUser->buscarUser("user", $_POST["user"]);
+	    $sesion = $repoUser->buscarEspecifico("user", $_POST["user"]);
 	    $time = time()+36000;
 
 	    setcookie("user", $sesion["user"], $time);
@@ -31,7 +31,7 @@ class Sesion {
 	public static function mantenerLogin() {
 		global $repoUser;
 	    if (isset($_COOKIE) && !isset($_SESSION)) {
-	        $sesion = $repoUser->buscarUser("user", $_COOKIE["user"]);
+	        $sesion = $repoUser->buscarEspecifico("user", $_COOKIE["user"]);
 	        if ($_COOKIE["user"] == $sesion["user"] && $_COOKIE["sesion"] == hash('sha256', $sesion["id"])){
 	            $_SESSION["id"] = $sesion["id"];
 	            $_SESSION["user"] = $sesion["user"];
@@ -57,7 +57,7 @@ class Sesion {
 	public static function logueo($user, $pass) {
 		global $repoUser;
 
-	    $datos = $repoUser->buscarUser("user", $user);
+	    $datos = $repoUser->buscarEspecifico("user", $user);
 	    if ($datos !== 0) {
 	        if (password_verify($pass, $datos["pass"]) == 1) {
 	            return 1;

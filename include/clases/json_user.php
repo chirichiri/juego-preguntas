@@ -13,21 +13,16 @@ class Json_user extends Json {
 	    file_put_contents($this->getArchivo(), json_encode($user) . PHP_EOL, FILE_APPEND);
 	}
 
-	public function buscarUser($campo, $valor) {
-	    $archivo = fopen($this->getArchivo(), "r");
+	public function traerTop($cantidad) {
+		$array = $this->todosDatos();
 
-	    if ($archivo) {
-	        while (($linea = fgets($archivo)) !== FALSE) {
-	            $user = json_decode($linea, TRUE);
+		usort($array, function($a, $b) {
+		    return $b["puntos"] <=> $a["puntos"];
+		});
 
-	            if ($user[$campo] == $valor) {
-	                fclose($archivo);
-	                return $user;
-	            }
-	        }
-	        fclose($archivo);
-	        return 0;
-	    }
+		$array = array_slice($array, 0, $cantidad);
+
+		return $array;
 	}
 }
 

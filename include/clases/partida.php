@@ -20,13 +20,15 @@ class Partida {
 		$pregunta = $repoPregunta->buscarPregunta();
 
 		$this->setId($repoPartida->generarID());
-		echo $this->getId();
 		$this->setIdUser($_SESSION["id"]);
 		$this->setPregunta($pregunta->getPregunta());
+		$this->setRespCorrecta($pregunta->getRespuesta1());
 		$this->setRespuesta1($pregunta->getRespuesta1());
 		$this->setRespuesta2($pregunta->getRespuesta2());
 		$this->setRespuesta3($pregunta->getRespuesta3());
 		$this->setRespuesta4($pregunta->getRespuesta4());
+
+		$_SESSION["partida"] = $this->getId();
 
 		$this->mezclarRespuestas();
 
@@ -47,9 +49,6 @@ class Partida {
 
 		foreach ($keys as $key) {
 			$random[$i] = $resp[$key];
-			if ($key === 0) {
-				$this->setRespCorrecta($i);
-			}
 			$i++;
 		}
 
@@ -62,15 +61,22 @@ class Partida {
 
 	}
 
-	public function responder($respuesta) {
+	public static function responder($respuesta) {
 		global $repoUser;
 		global $repoPartida;
+		$correcto = 0;
 
-		$puntos = $repoUser->buscarUser("id", $_SESSION["id"]);
+		$partida = $repoPartida->buscarEspecifico("id", $_SESSION["partida"]);
 
-		if ($respuesta === $this->getRespCorrecta()) {
+		if ($respuesta === $partida["respCorrecta"]) {
+			$correcto = 1;
+		}
+
+		$puntos = $repoUser->buscarEspecifico("id", $_SESSION["id"]);
+
+		if ($correcto === 1) {
 			$puntos = $puntos["puntos"] + 10;
-		} elseif ($respuesta !== $this->getRespCorrecta()) {
+		} elseif ($correcto !== 1) {
 			$puntos = $puntos["puntos"] - 5;
 			if ($puntos < 0) {
 				$puntos = 0;
@@ -78,7 +84,9 @@ class Partida {
 		}
 		$_SESSION["puntos"] = $puntos;
 		$repoUser->modificarEspecifico($_SESSION["id"], "puntos", $puntos);
-		$repoPartida->responderPartida($this->getId(), $respuesta);
+		$repoPartida->responderPartida($partida["id"], $respuesta);
+
+		return $correcto;
 	}
 
 	public function getRespuestas() {

@@ -2,15 +2,6 @@
 require_once('functions.php');
 // debug();
 
-$actual = basename($_SERVER['PHP_SELF']);
-
-if ($actual === "test.php" || $actual === "jugar.php") {
-	$repoPartida = new Json_partida(realpath(__DIR__ . "/partidas.json"));
-	$partida = new Partida();
-	$repoPartida->crearPartida($partida);
-	echo '<script type="text/javascript" src="js/partida.js"></script>';
-}
-
 if ($_POST && isset($_POST["login"])) {
     if (Sesion::logueo($_POST["user"], $_POST["pass"]) == 1) {
         Sesion::genSesion();
@@ -38,10 +29,15 @@ $titulos = [
 "jugar.php" =>  "Preguntando con jugo",
 "cargarpregunta.php"    =>  "Cargar pregunta nueva",
 "user.php"  =>  "No deberías estar acá",
-"test.php"	=>	"testeando cosas"
+"test.php"	=>	"testeando cosas",
+"leaderboard.php"	=>	"Tabla de posiciones"
 ];
 
-$titulo = $titulos[$actual];
+if (isset($titulo[$actual])) {
+	$titulo = $titulos[$actual];
+} else {
+	$titulo = "Título pendiente";
+}
 
  ?>
 
@@ -60,7 +56,7 @@ $titulo = $titulos[$actual];
                 <a href="index.php"><p>LOGO</p></a>
             </div>
         </header>
+		<?php if ($logueado === 1) {
+	        require_once('include/user.php');
+	    } ?>
 <section id="main">
-    <?php if ($logueado === 1) {
-        require_once('include/user.php');
-    } ?>

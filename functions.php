@@ -13,7 +13,14 @@ $repoUser = new Json_user(realpath(__DIR__ . "/usuarios.json"));
 
 $repoPregunta = new Json_pregunta(realpath(__DIR__ . "/preguntas.json"));
 
+$actual = basename($_SERVER['PHP_SELF']);
 
+if ($actual === "test.php" || $actual === "jugar.php") {
+	$repoPartida = new Json_partida(realpath(__DIR__ . "/partidas.json"));
+	$partida = new Partida();
+	$repoPartida->crearPartida($partida);
+	echo '<script type="text/javascript" src="js/partida.js"></script>';
+}
 
 function redirect($url, $permanent = false) {
     header("Location:" .$url, true, $permanent? 301 : 302);

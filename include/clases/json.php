@@ -50,6 +50,23 @@ abstract class Json extends Repositorio {
 		return $arrayTerminado;
 	}
 
+	public function buscarEspecifico($campo, $valor) {
+	    $archivo = fopen($this->getArchivo(), "r");
+
+	    if ($archivo) {
+	        while (($linea = fgets($archivo)) !== FALSE) {
+	            $final = json_decode($linea, TRUE);
+
+	            if ($final[$campo] == $valor) {
+	                fclose($archivo);
+	                return $final;
+	            }
+	        }
+	        fclose($archivo);
+	        return 0;
+	    }
+	}
+
 	public function setArchivo($archivo) {
 		$this->archivo = $archivo;
 		return $this;

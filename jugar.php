@@ -14,7 +14,7 @@ if ($logueado == 0) {
 	foreach ($respuestas as $key => $value){
         if ($key !== "preg" && $key !== "id") {?>
         <div id="resp<?=$id?>"  class="square flex-row-center">
-            <a href="jugar.php?preg=<?=$respuestas["id"]?>&resp=<?=$id?>"><?=$respuestas[$key]?></a>
+            <p><?=$respuestas[$key]?></p>
         </div>
 
 <?php $id++;

@@ -48,9 +48,8 @@ header {
     flex: 1 100%;
     order: 2;
     max-width: 100%;
-    margin-top: 45px;
-    min-height: calc(100% - 100px);
     align-content: flex-start;
+	justify-content: center;
 }
 
 footer {
@@ -119,6 +118,7 @@ footer {
 }
 
 .user {
+	margin-top: 50px;
     background-color: #D0D6B5;
     order: 1;
     height: 105px;
@@ -178,7 +178,7 @@ footer {
     order: 5;
     background-color: #d64d4d;
     height: 100px;
-    margin-top: 20%;
+	cursor: pointer;
 }
 
 .jugar a {
@@ -313,6 +313,12 @@ footer {
     order: 4;
 }
 
+.user-actions-3 a {
+	color: #393E41;
+	font-weight: bold;
+	text-decoration: none;
+}
+
 .user-actions-4 {
     order: 3;
 }
@@ -328,6 +334,44 @@ footer {
 
 /************************* FIN USUARIO ***************************/
 
+/************************* LEADERBOARD ***************************/
+.lb {
+	background-color: #D64D4D;
+	color: white;
+	font-weight: bold;
+}
+
+.lb ul {
+	width: 100%;
+}
+
+.lb ul li {
+	border-bottom: 2px solid white;
+	width: 90%;
+	padding: 10px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.lb ul li:first-of-type {
+	border-top: 2px solid white;
+}
+
+.lb .lb-user {
+	width: 50%;
+}
+
+.lb .lb-puntos {
+	width: 50%;
+}
+
+.lb a {
+	text-decoration: none;
+	color: white;
+}
+
+/*********************** FIN LEADERBOARD *************************/
+
 /*************************** PREGUNTAS ***************************/
 #preg {
     min-height: 30px;
@@ -338,6 +382,7 @@ footer {
 
 #resp1, #resp2, #resp3, #resp4 {
     background-color: #D0D6B5;
+	cursor: pointer;
 }
 
 #resp1 a, #resp2 a, #resp3 a, #resp4 a {
@@ -366,9 +411,11 @@ footer {
     order: 7;
 }
 .user-small {
+	margin-top:50px;
     background-color: #D0D6B5;
-    order: 1;
+    order: 2;
     min-height: 70px;
+	max-height: 70px;
     width: 100%;
     border-bottom: 2px solid white;
     border-radius: 0;
@@ -399,12 +446,15 @@ footer {
     color: #393E41;
     font-weight: bold;
     text-transform: capitalize;
-    justify-content: flex-start;
 }
 
 .user-actions-small-1 a {
     text-decoration: none;
     color: #393E41;
+}
+
+.user-actions-small-1 p {
+	text-align: center;
 }
 
 .user-actions-small-2 {
@@ -422,6 +472,23 @@ footer {
 .user-actions-small-4 {
     order: 4;
     display: none;
+}
+
+.end {
+	height: 100px;
+	background-color: #D64D4D;
+	color: white;
+	font-weight: bold;
+}
+
+.end button {
+	border: none;
+	background-color: #D0D6B5;
+	padding: 5px 10px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 5px black;
+	margin-top: 10px;
+	cursor: pointer;
 }
 
 /************************* FIN PREGUNTAS *************************/

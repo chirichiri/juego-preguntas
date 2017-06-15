@@ -3,7 +3,7 @@ if ($logueado == 0) {
     redirect('index.php');
 }elseif ($logueado = 1) {
 
-    $user = $repoUser->buscarUser("user", $_SESSION["user"]); ?>
+    $user = $repoUser->buscarEspecifico("user", $_SESSION["user"]); ?>
 
     <div class="profile square flex-row-center">
         <h1>Cambiar Avatar</h1>
