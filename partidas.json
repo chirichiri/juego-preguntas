@@ -1,2 +1,7 @@
 {"id":1,"idUser":1,"pregunta":"quien es madonna?","respCorrecta":3,"respuesta1":"jorge","respuesta2":"madonna","respuesta3":"moncho","respuesta4":"tito","elegido":2}
 {"id":2,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"jorge","respuesta2":"tito","respuesta3":"moncho","respuesta4":"madonna","elegido":null}
+{"id":3,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"tito","respuesta2":"moncho","respuesta3":"jorge","respuesta4":"madonna","elegido":null}
+{"id":4,"idUser":2,"pregunta":"sadfsadf","respCorrecta":"sdaf","respuesta1":"asdf","respuesta2":"sdafasdf","respuesta3":"asdf","respuesta4":"sdaf","elegido":"asdf"}
+{"id":5,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"jorge","respuesta2":"madonna","respuesta3":"tito","respuesta4":"moncho","elegido":"tito"}
+{"id":6,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"jorge","respuesta2":"moncho","respuesta3":"madonna","respuesta4":"tito","elegido":null}
+{"id":7,"idUser":2,"pregunta":"jorge?","respCorrecta":"lanata","respuesta1":"lanata","respuesta2":"kirchner","respuesta3":"macri","respuesta4":"scioli","elegido":null}

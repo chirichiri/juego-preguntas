@@ -50,6 +50,9 @@ if ($logueado == 0) { ?>
 		<div class="jugar square flex-row-center">
             <a href="leaderboard.php">LEADERBOARD</a>
         </div>
+		<div class="jugar square flex-row-center">
+            <a href="cargarpregunta.php">CARGAR PREGUNTA</a>
+        </div>
 
         <?php } ?>
 
