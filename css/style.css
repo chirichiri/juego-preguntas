@@ -336,13 +336,14 @@ footer {
 
 /************************* LEADERBOARD ***************************/
 .lb {
-	background-color: #D64D4D;
+	background-color: #D0D6B5;
 	color: white;
 	font-weight: bold;
 }
 
 .lb ul {
 	width: 100%;
+	margin-top: 0;
 }
 
 .lb ul li {
@@ -351,23 +352,31 @@ footer {
 	padding: 10px;
 	margin: 0 auto;
 	align-items: center;
+	color: #393E41;
 }
 
-.lb ul li:first-of-type {
-	border-top: 2px solid white;
-}
-
-.lb .lb-user {
+.lb-user, .lb-user-tit {
 	width: 50%;
 }
 
-.lb .lb-puntos {
+.lb-puntos, .lb-puntos-tit {
 	width: 50%;
+}
+
+.lb-user {
+	text-align: center;
+	padding-right: 30px;
+	overflow: hidden;
+}
+
+.lb-puntos {
+	text-align: right;
 }
 
 .lb a {
 	text-decoration: none;
-	color: white;
+	color: #393E41;
+	margin-bottom: 10px;
 }
 
 /*********************** FIN LEADERBOARD *************************/

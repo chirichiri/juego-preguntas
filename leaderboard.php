@@ -5,12 +5,12 @@ $usuarios = $repoUser->traerTop(5);
 
 ?>
 
-<div class="lb square flex-row-center">
+<div class="lb profile square flex-row-center">
+	<h1 class="flex-row-center">
+		<div class="lb-user-tit">Usuario</div>
+		<div class="lb-puntos-tit">Puntaje</div>
+	</h1>
 	<ul>
-		<li class="flex-row-center">
-			<div class="lb-user">Usuario</div>
-			<div class="lb-puntos">Puntaje</div>
-		</li>
 		<?php
 		foreach ($usuarios as $key => $value) {
 			echo '<li class="flex-row-center">

@@ -39,8 +39,6 @@ if ($logueado == 0) { ?>
         </div>
     </div>
     <?php } elseif ($logueado == 1) {?>
-
-
         <!--<div class="noticias square flex-row-center">
             <p>noticias</p>
         </div>-->

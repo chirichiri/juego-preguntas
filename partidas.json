@@ -5,3 +5,13 @@
 {"id":5,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"jorge","respuesta2":"madonna","respuesta3":"tito","respuesta4":"moncho","elegido":"tito"}
 {"id":6,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"jorge","respuesta2":"moncho","respuesta3":"madonna","respuesta4":"tito","elegido":null}
 {"id":7,"idUser":2,"pregunta":"jorge?","respCorrecta":"lanata","respuesta1":"lanata","respuesta2":"kirchner","respuesta3":"macri","respuesta4":"scioli","elegido":null}
+{"id":8,"idUser":2,"pregunta":"jorge?","respCorrecta":"lanata","respuesta1":"kirchner","respuesta2":"macri","respuesta3":"lanata","respuesta4":"scioli","elegido":"lanata"}
+{"id":9,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"jorge","respuesta2":"moncho","respuesta3":"tito","respuesta4":"madonna","elegido":null}
+{"id":10,"idUser":2,"pregunta":"sadfsadf","respCorrecta":"sdaf","respuesta1":"sdaf","respuesta2":"asdf","respuesta3":"sdafasdf","respuesta4":"asdf","elegido":"sdaf"}
+{"id":11,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"moncho","respuesta2":"madonna","respuesta3":"tito","respuesta4":"jorge","elegido":"tito"}
+{"id":12,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"tito","respuesta2":"jorge","respuesta3":"moncho","respuesta4":"madonna","elegido":"tito"}
+{"id":13,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"jorge","respuesta2":"moncho","respuesta3":"madonna","respuesta4":"tito","elegido":"jorge"}
+{"id":14,"idUser":2,"pregunta":"quien es madonna?","respCorrecta":"tito","respuesta1":"madonna","respuesta2":"jorge","respuesta3":"tito","respuesta4":"moncho","elegido":"tito"}
+{"id":15,"idUser":4,"pregunta":"sadfsadf","respCorrecta":"sdaf","respuesta1":"sdaf","respuesta2":"sdafasdf","respuesta3":"asdf","respuesta4":"asdf","elegido":"sdaf"}
+{"id":16,"idUser":4,"pregunta":"jorge?","respCorrecta":"lanata","respuesta1":"lanata","respuesta2":"macri","respuesta3":"scioli","respuesta4":"kirchner","elegido":"lanata"}
+{"id":17,"idUser":4,"pregunta":"sadfsadf","respCorrecta":"sdaf","respuesta1":"sdafasdf","respuesta2":"asdf","respuesta3":"sdaf","respuesta4":"asdf","elegido":"sdafasdf"}
