@@ -2,6 +2,7 @@
 require_once 'json_pregunta.php';
 require_once 'json_user.php';
 require_once 'json_partida.php';
+require_once 'json_categoria.php';
 
 abstract class Json extends Repositorio {
 

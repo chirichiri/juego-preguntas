@@ -13,11 +13,19 @@ $repoUser = new Json_user(realpath(__DIR__ . "/usuarios.json"));
 
 $repoPregunta = new Json_pregunta(realpath(__DIR__ . "/preguntas.json"));
 
+$repoCategoria = new Json_categoria(realpath(__DIR__ . "/categorias.json"));
+
 $actual = basename($_SERVER['PHP_SELF']);
 
 if ($actual === "test.php" || $actual === "jugar.php") {
 	$repoPartida = new Json_partida(realpath(__DIR__ . "/partidas.json"));
-	$partida = new Partida();
+	if (isset($_POST["categoria"])) {
+		$partida = new Partida($_POST["categoria"]);
+	} else {
+		$partida = new Partida();
+
+	}
+
 	$repoPartida->crearPartida($partida);
 	echo '<script type="text/javascript" src="js/partida.js"></script>';
 }

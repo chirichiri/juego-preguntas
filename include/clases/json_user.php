@@ -17,7 +17,8 @@ class Json_user extends Json {
 		$array = $this->todosDatos();
 
 		usort($array, function($a, $b) {
-		    return $b["puntos"] <=> $a["puntos"];
+			if ($a["puntos"] == $b["puntos"]) return 0;
+			return ($a["puntos"] < $b["puntos"]) ? 1 : -1;
 		});
 
 		$array = array_slice($array, 0, $cantidad);

@@ -4,6 +4,7 @@ require_once 'json.php';
 class Json_pregunta extends Json {
 
 	public function cargarPregunta(Pregunta $pregunta) {
+		global $repoCategoria;
 	    $preguntaFinal = [
 	        "id"    =>  $this->generarID(),
 	        "preg"  =>  $pregunta->getPregunta(),
@@ -13,12 +14,18 @@ class Json_pregunta extends Json {
 	        "resp4" =>  $pregunta->getRespuesta4()
 	    ];
 
+		$repoCategoria->agregarPregunta($pregunta->getCategoria(), $preguntaFinal["id"]);
+
 	    file_put_contents($this->getArchivo(), json_encode($preguntaFinal) . PHP_EOL, FILE_APPEND);
 	}
 
-	public function buscarPregunta() {
+	public function buscarPregunta($cat = 0) {
 	    $archivo = fopen($this->getArchivo(), "r");
-	    $rand = rand(1, $this->contarPreguntas());
+		if ($cat !== 0) {
+			$rand = rand($cat[0], $cat[count($cat)-1]);
+		} else {
+			$rand = rand(1, $this->contarPreguntas());
+		}
 
 	    if ($archivo) {
 	        while (($linea = fgets($archivo)) !== FALSE) {

@@ -48,7 +48,6 @@ header {
     flex: 1 100%;
     order: 2;
     max-width: 100%;
-    align-content: flex-start;
 	justify-content: center;
 }
 
@@ -113,7 +112,7 @@ footer {
     margin: auto;
 }
 
-#loguearse {
+#loguearse, .categoria {
 	cursor: pointer;
 }
 
@@ -186,6 +185,9 @@ footer {
     color: white;
     font-weight: 700;
     font-size: 30px;
+	width: 100%;
+	text-align: center;
+	height: 100%;
 }
 
 /*************************** FIN MAIN ****************************/
@@ -332,6 +334,20 @@ footer {
     padding: 3px;
 }
 
+.cargarOptions {
+	text-align: center;
+	text-align-last: center;
+	color: grey;
+	background-color: white;
+	border: 3px solid #D64D4D;
+
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    text-indent: 0.1;
+    text-overflow: '';
+}
+
 /************************* FIN USUARIO ***************************/
 
 /************************* LEADERBOARD ***************************/
@@ -384,6 +400,7 @@ footer {
 /*************************** PREGUNTAS ***************************/
 #preg {
     min-height: 30px;
+	max-height: 50px;
     background-color: #D64D4D;
     color: white;
     font-weight: bold;
@@ -418,6 +435,15 @@ footer {
 
 #resp4 {
     order: 7;
+}
+
+#categorias {
+	order: 2;
+	width: 100%;
+}
+
+.categoria {
+	background-color: #D0D6B5;
 }
 .user-small {
 	margin-top:50px;

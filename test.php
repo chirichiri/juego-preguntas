@@ -3,21 +3,14 @@ if ($logueado == 0) {
     redirect('index.php');
 }elseif ($logueado = 1) {
 
+require_once 'include/clases/categoria.php';
 
-	echo $partida->getPregunta();
-	echo "<br>";
-	echo $partida->getRespCorrecta();
-	echo "<br>";
-	echo $partida->getRespuesta1();
-	echo "<br>";
-	echo $partida->getRespuesta2();
-	echo "<br>";
-	echo $partida->getRespuesta3();
-	echo "<br>";
-	echo $partida->getRespuesta4();
-	echo "<br>";
-	echo $partida->getIdUser();
-	$partida->responder(2);
+$repoCategoria = new Json_categoria(realpath(__DIR__ . "/categorias.json"));
+// $repoCategoria->crearCategoria(new categoria(1, "jorge", ["montoto", "jorge"]));
+
+// var_dump($repoCategoria->getCategorias());
+
+$repoCategoria->agregarPregunta(1);
 
 }
  require_once('footer.php'); ?>

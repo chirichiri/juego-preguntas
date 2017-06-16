@@ -13,11 +13,15 @@ class Partida {
 	private $respuesta4;
 	private $elegido;
 
-	public function __construct() {
+	public function __construct($cat = 0) {
 		global $repoPregunta;
 		global $repoPartida;
 
-		$pregunta = $repoPregunta->buscarPregunta();
+		if ($cat === 0) {
+			$pregunta = $repoPregunta->buscarPregunta($cat);
+		} else {
+			$pregunta = $repoPregunta->buscarPregunta();
+		}
 
 		$this->setId($repoPartida->generarID());
 		$this->setIdUser($_SESSION["id"]);

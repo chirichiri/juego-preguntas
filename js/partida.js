@@ -5,12 +5,36 @@ window.onload = function() {
 	var resp3 = document.querySelector("#resp3");
 	var resp4 = document.querySelector("#resp4");
 	var main = document.querySelector("#main");
+	var categorias = document.querySelector("#categorias");
 
 	var arrayResp = [resp1, resp2, resp3, resp4];
 
-	arrayResp.forEach(function(elemento) {
-		elemento.addEventListener("click", mandar);
-	});
+
+	if (categorias !== null) {
+		var children = Array.from(categorias.children);
+
+		children.forEach(function(elemento) {
+			elemento.addEventListener("click", preguntas);
+		});
+	}
+
+
+
+	if (arrayResp[0] !== null) {
+		arrayResp.forEach(function(elemento) {
+			elemento.addEventListener("click", mandar);
+		});
+	}
+
+
+	function preguntas(evento) {
+
+		var form = document.querySelector("form");
+		var categoria = document.querySelector("input");
+
+		categoria.value = this.name;
+
+	}
 
 	function mandar() {
 		var respuesta = new XMLHttpRequest();

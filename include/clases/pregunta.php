@@ -2,6 +2,7 @@
 
 class Pregunta {
 	private $id;
+	private $categoria;
 	private $pregunta;
 	private $respuesta_1;
 	private $respuesta_2;
@@ -14,6 +15,10 @@ class Pregunta {
 			$this->setId(0);
 		}else {
 			$this->setId($pregunta["id"]);
+		}
+
+		if (isset($pregunta["categoria"])) {
+			$this->setCategoria($pregunta["categoria"]);
 		}
 
 		$this->setPregunta($pregunta["preg"]);
@@ -159,7 +164,18 @@ class Pregunta {
 
 	    return $this;
 	}
-          }
+
+
+	public function getCategoria() {
+	      return $this->categoria;
+	}
+
+	public function setCategoria($categoria) {
+	    $this->categoria = $categoria;
+
+	    return $this;
+	}
+}
 //
 // $preg = [
 // 	"preg"	=>	"quien?",

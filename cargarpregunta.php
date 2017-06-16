@@ -8,6 +8,14 @@ if ($logueado == 0) {
         <div class="campo">
             <input type="text" name="preg" placeholder="Pregunta">
         </div>
+		<div class="campo">
+			<select class="cargarOptions" name="categoria">
+				<option value="">-- ELEGIR CATEGORIA --</option>
+				<?php foreach ($repoCategoria->getCategorias() as $key => $value): ?>
+					<option value="<?=$key?>"><?=$value?></option>
+				<?php endforeach; ?>
+			</select>
+		</div>
         <div class="campo">
             <input type="text" name="resp1" placeholder="Respuesta Correcta">
         </div>

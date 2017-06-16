@@ -42,14 +42,14 @@ if ($logueado == 0) { ?>
         <!--<div class="noticias square flex-row-center">
             <p>noticias</p>
         </div>-->
-        <div class="jugar square flex-row-center">
-            <a href="jugar.php">JUGAR</a>
+        <div class="jugar square">
+            <a href="jugar.php" class="flex-row-center">JUGAR</a>
         </div>
-		<div class="jugar square flex-row-center">
-            <a href="leaderboard.php">LEADERBOARD</a>
+		<div class="jugar square">
+            <a href="leaderboard.php" class="flex-row-center">LEADERBOARD</a>
         </div>
-		<div class="jugar square flex-row-center">
-            <a href="cargarpregunta.php">CARGAR PREGUNTA</a>
+		<div class="jugar square">
+            <a href="cargarpregunta.php" class="flex-row-center">CARGAR PREGUNTA</a>
         </div>
 
         <?php } ?>
