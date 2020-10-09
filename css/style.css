@@ -9,17 +9,18 @@
 }
 
 ul li {
-	list-style: none;
-	text-align: center;
+    list-style: none;
+    text-align: center;
 }
 
-body, html {
+body,
+html {
     width: 100%;
     height: 100%;
 }
 
 body {
-    background-color: #547AA5;
+    background-color: #547aa5;
 }
 
 #container {
@@ -30,11 +31,11 @@ body {
 }
 
 header {
-    position:fixed;
+    position: fixed;
     height: 50px;
     width: 100%;
     order: 1;
-    background-color: #D64D4D;
+    background-color: #d64d4d;
     border-bottom: 1px solid white;
     display: flex;
     flex-flow: column;
@@ -48,7 +49,7 @@ header {
     flex: 1 100%;
     order: 2;
     max-width: 100%;
-	justify-content: center;
+    justify-content: center;
 }
 
 footer {
@@ -101,24 +102,24 @@ footer {
     text-decoration: none;
 }
 
-
 /*************************** FIN HEADER **************************/
 
 /***************************** MAIN ******************************/
 .forms {
-    background-color: #D0D6B5;
+    background-color: #d0d6b5;
     height: 250px;
     order: 1;
     margin: auto;
 }
 
-#loguearse, .categoria {
-	cursor: pointer;
+#loguearse,
+.categoria {
+    cursor: pointer;
 }
 
 .user {
-	margin-top: 50px;
-    background-color: #D0D6B5;
+    margin-top: 50px;
+    background-color: #d0d6b5;
     order: 1;
     height: 105px;
     width: 100%;
@@ -130,13 +131,13 @@ footer {
     flex: 0 70%;
     margin: auto;
     order: 2;
-    color: #393E41;
+    color: #393e41;
     margin-top: 5vw;
-    background-color: #D0D6B5;
+    background-color: #d0d6b5;
 }
 
 .profile h1 {
-    color: white;
+    color: red;
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
@@ -155,7 +156,7 @@ footer {
 
 .profile li {
     font-family: Roboto;
-    font-size: 15px;
+    font-size: 20px;
     margin: 3px 0;
 }
 
@@ -169,7 +170,7 @@ footer {
 
 .noticias {
     order: 2;
-    background-color: #FFCDB2;
+    background-color: #ffcdb2;
     max-height: 150px;
 }
 
@@ -177,17 +178,17 @@ footer {
     order: 5;
     background-color: #d64d4d;
     height: 100px;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .jugar a {
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 30px;
-	width: 100%;
-	text-align: center;
-	height: 100%;
+    width: 100%;
+    text-align: center;
+    height: 100%;
 }
 
 /*************************** FIN MAIN ****************************/
@@ -202,7 +203,7 @@ footer {
     flex: 0 100%;
     color: white;
     font-weight: bold;
-    background-color: #F48668;
+    background-color: #f48668;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -215,14 +216,14 @@ footer {
 #login {
     order: 1;
     width: 50%;
-    background-color: #D64D4D;
+    background-color: #d64d4d;
     border-top-left-radius: 10px;
     cursor: pointer;
 }
 
 #register {
     order: 2;
-    background-color: #F48668;
+    background-color: #f48668;
     width: 50%;
     border-top-right-radius: 10px;
     cursor: pointer;
@@ -243,21 +244,21 @@ footer {
     padding: 8px 8px;
 }
 
-.campo input:focus{
+.campo input:focus {
     outline: 4px solid #d64d4d;
 }
 
 .campo input {
     text-align: center;
-    border: 3px solid #D64D4D;
+    border: 3px solid #d64d4d;
 }
 
 .campo button {
-    background-color: #D64D4D;
+    background-color: #d64d4d;
     color: white;
     font-weight: bold;
-    border: 1px solid #D64D4D;
-    box-shadow: 1px 1px 5px black;
+    border: 1px solid #d64d4d;
+    box-shadow: 2px 2px 5px black;
 }
 /************************* FIN REGISTRO **************************/
 
@@ -278,7 +279,7 @@ footer {
 }
 
 #logout {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .user-info {
@@ -289,7 +290,10 @@ footer {
     text-align: center;
 }
 
-.user-actions-1, .user-actions-2, .user-actions-3, .user-actions-4 {
+.user-actions-1,
+.user-actions-2,
+.user-actions-3,
+.user-actions-4 {
     flex: 0 50%;
     min-height: 50%;
     overflow: hidden;
@@ -297,14 +301,14 @@ footer {
 
 .user-actions-1 {
     order: 1;
-    color: #393E41;
+    color: #393e41;
     font-weight: bold;
     text-transform: capitalize;
 }
 
 .user-actions-1 a {
     text-decoration: none;
-    color: #393E41;
+    color: #393e41;
 }
 
 .user-actions-2 {
@@ -316,32 +320,33 @@ footer {
 }
 
 .user-actions-3 a {
-	color: #393E41;
-	font-weight: bold;
-	text-decoration: none;
+    color: #393e41;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .user-actions-4 {
     order: 3;
 }
 
-.user-actions-small-2 button, .user-actions-2 button{
-    background-color: #D64D4D;
-    color: white;
+.user-actions-small-2 button,
+.user-actions-2 button {
+    background-color: #d64d4d;
+    color: black;
     font-weight: bold;
-    border: 1px solid #D64D4D;
+    border: 1px solid #d64d4d;
     box-shadow: 1px 1px 5px black;
     padding: 3px;
 }
 
 .cargarOptions {
-	text-align: center;
-	text-align-last: center;
-	color: grey;
-	background-color: white;
-	border: 3px solid #D64D4D;
+    text-align: center;
+    text-align-last: center;
+    color: grey;
+    background-color: white;
+    border: 3px solid #d64d4d;
 
-	-moz-appearance: none;
+    -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     text-indent: 0.1;
@@ -352,47 +357,49 @@ footer {
 
 /************************* LEADERBOARD ***************************/
 .lb {
-	background-color: #D0D6B5;
-	color: white;
-	font-weight: bold;
+    background-color: #d0d6b5;
+    color: white;
+    font-weight: bold;
 }
 
 .lb ul {
-	width: 100%;
-	margin-top: 0;
+    width: 100%;
+    margin-top: 0;
 }
 
 .lb ul li {
-	border-bottom: 2px solid white;
-	width: 90%;
-	padding: 10px;
-	margin: 0 auto;
-	align-items: center;
-	color: #393E41;
+    border-bottom: 2px solid white;
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    align-items: center;
+    color: #393e41;
 }
 
-.lb-user, .lb-user-tit {
-	width: 50%;
+.lb-user,
+.lb-user-tit {
+    width: 50%;
 }
 
-.lb-puntos, .lb-puntos-tit {
-	width: 50%;
+.lb-puntos,
+.lb-puntos-tit {
+    width: 50%;
 }
 
 .lb-user {
-	text-align: center;
-	padding-right: 30px;
-	overflow: hidden;
+    text-align: center;
+    padding-right: 30px;
+    overflow: hidden;
 }
 
 .lb-puntos {
-	text-align: right;
+    text-align: right;
 }
 
 .lb a {
-	text-decoration: none;
-	color: #393E41;
-	margin-bottom: 10px;
+    text-decoration: none;
+    color: #393e41;
+    margin-bottom: 10px;
 }
 
 /*********************** FIN LEADERBOARD *************************/
@@ -400,20 +407,26 @@ footer {
 /*************************** PREGUNTAS ***************************/
 #preg {
     min-height: 30px;
-	max-height: 50px;
-    background-color: #D64D4D;
+    max-height: 50px;
+    background-color: #d64d4d;
     color: white;
     font-weight: bold;
 }
 
-#resp1, #resp2, #resp3, #resp4 {
-    background-color: #D0D6B5;
-	cursor: pointer;
+#resp1,
+#resp2,
+#resp3,
+#resp4 {
+    background-color: #d0d6b5;
+    cursor: pointer;
 }
 
-#resp1 a, #resp2 a, #resp3 a, #resp4 a {
+#resp1 a,
+#resp2 a,
+#resp3 a,
+#resp4 a {
     text-decoration: none;
-    color: #393E41;
+    color: #393e41;
     font-weight: bold;
 }
 
@@ -438,19 +451,19 @@ footer {
 }
 
 #categorias {
-	order: 2;
-	width: 100%;
+    order: 2;
+    width: 100%;
 }
 
 .categoria {
-	background-color: #D0D6B5;
+    background-color: #d0d6b5;
 }
 .user-small {
-	margin-top:50px;
-    background-color: #D0D6B5;
+    margin-top: 50px;
+    background-color: #d0d6b5;
     order: 2;
     min-height: 70px;
-	max-height: 70px;
+    max-height: 70px;
     width: 100%;
     border-bottom: 2px solid white;
     border-radius: 0;
@@ -470,7 +483,10 @@ footer {
     order: 2;
 }
 
-.user-actions-small-1, .user-actions-small-2, .user-actions-small-3, .user-actions-small-4 {
+.user-actions-small-1,
+.user-actions-small-2,
+.user-actions-small-3,
+.user-actions-small-4 {
     flex: 0 33%;
     min-height: 30px;
     overflow: hidden;
@@ -478,18 +494,18 @@ footer {
 
 .user-actions-small-1 {
     order: 1;
-    color: #393E41;
+    color: #393e41;
     font-weight: bold;
     text-transform: capitalize;
 }
 
 .user-actions-small-1 a {
     text-decoration: none;
-    color: #393E41;
+    color: #393e41;
 }
 
 .user-actions-small-1 p {
-	text-align: center;
+    text-align: center;
 }
 
 .user-actions-small-2 {
@@ -510,20 +526,20 @@ footer {
 }
 
 .end {
-	height: 100px;
-	background-color: #D64D4D;
-	color: white;
-	font-weight: bold;
+    height: 100px;
+    background-color: #d64d4d;
+    color: white;
+    font-weight: bold;
 }
 
 .end button {
-	border: none;
-	background-color: #D0D6B5;
-	padding: 5px 10px;
-	border-radius: 5px;
-	box-shadow: 1px 1px 5px black;
-	margin-top: 10px;
-	cursor: pointer;
+    border: none;
+    background-color: #d0d6b5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 /************************* FIN PREGUNTAS *************************/
